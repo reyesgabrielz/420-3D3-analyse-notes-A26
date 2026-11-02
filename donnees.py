@@ -1,5 +1,5 @@
 from models.etudiant import Etudiant
-from models.composite import Composite, GroupeCours, Session, Cours, Programme
+from models.composite import Composite, GroupeCours, Session, Cours, Programme, Departement
 
 
 def construire_programme() -> Composite:
@@ -53,7 +53,12 @@ def construire_programme() -> Composite:
 
     # --- Programme ---
     programme = Programme("Techniques de l'informatique")
-    programme.ajouter(cours_3d3)
+
+    # --- Département ---
+    departement_info = Departement("Informatique")
+    departement_info.ajouter(cours_3d3)
+    programme.ajouter(departement_info)
+
     programme.ajouter(cours_3r1)
 
     return programme

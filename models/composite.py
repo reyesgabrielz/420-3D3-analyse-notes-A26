@@ -42,3 +42,6 @@ class Cours(Composite):
 
 class Programme(Composite):
     pass
+
+class Departement(Composite):
+    pass
